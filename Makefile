@@ -1,5 +1,4 @@
 TCL_VARS = set IMPL_STRATEGY $(IMPL_STRATEGY)\;
-if 
 
 main:
 ifeq($(DOWNLOAD_URL),0)
