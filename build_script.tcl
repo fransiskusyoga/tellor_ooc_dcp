@@ -2,6 +2,8 @@
 #unplace_cell [get_cells -regexp -hier shell_0xbitcoin/CORES....core_0xbitcoin.* -filter {IS_PRIMITIVE}]
 #lock_design -level routing
 #write_checkpoint testku.dcp
+#https://github.com/fransiskusyoga/tellor_ooc_dcp/releases/download/v1/top_0xbitcoin_routed_square_unplaced.dcp
+#https://github.com/fransiskusyoga/tellor_ooc_dcp/releases/download/v1/top_0xbitcoin_routed_vert_unplaced.dcp
 
 open_checkpoint initial_design.dcp 
 
