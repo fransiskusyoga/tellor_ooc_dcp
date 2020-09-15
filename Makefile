@@ -9,5 +9,5 @@ endif
 main:
 	curl -L -o initial_design.dcp $(LINK)
 	@echo $(TCL_VARS) >run.tcl
-	@cat vivado_build_script.tcl >>run.tcl
+	@cat build_script.tcl >>run.tcl
 	vivado -mode tcl -stack 2000 -source run.tcl
