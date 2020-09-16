@@ -7,7 +7,7 @@
 
 open_checkpoint initial_design.dcp 
 
-if {$IMPL_STRATEGY == "Performance_Explore"}{
+if {$IMPL_STRATEGY == "Performance_Explore"} {
    opt_design -directive Explore
    write_checkpoint rerun_opt.dcp
    place_design -directive Explore
@@ -16,8 +16,7 @@ if {$IMPL_STRATEGY == "Performance_Explore"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive Explore 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Performance_ExploreWithRemap"}{
+} elseif {$IMPL_STRATEGY == "Performance_ExploreWithRemap"} {
    opt_design -directive ExploreWithRemap
    write_checkpoint rerun_opt.dcp
    place_design -directive Explore
@@ -26,8 +25,7 @@ elseif {$IMPL_STRATEGY == "Performance_ExploreWithRemap"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive NoTimingRelaxation 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Performance_WLBlockPlacement"}{
+} elseif {$IMPL_STRATEGY == "Performance_WLBlockPlacement"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive WLDrivenBlockPlacement
@@ -36,8 +34,7 @@ elseif {$IMPL_STRATEGY == "Performance_WLBlockPlacement"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive Explore 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Performance_WLBlockPlacementFanoutOpt"}{
+} elseif {$IMPL_STRATEGY == "Performance_WLBlockPlacementFanoutOpt"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive WLDrivenBlockPlacement
@@ -46,8 +43,7 @@ elseif {$IMPL_STRATEGY == "Performance_WLBlockPlacementFanoutOpt"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive Explore 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Performance_EarlyBlockPlacement"}{
+} elseif {$IMPL_STRATEGY == "Performance_EarlyBlockPlacement"} {
    opt_design -directive Explore
    write_checkpoint rerun_opt.dcp
    place_design -directive EarlyBlockPlacement
@@ -56,8 +52,7 @@ elseif {$IMPL_STRATEGY == "Performance_EarlyBlockPlacement"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive Explore 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Performance_NetDelay_high"}{
+} elseif {$IMPL_STRATEGY == "Performance_NetDelay_high"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive ExtraNetDelay_high
@@ -66,8 +61,7 @@ elseif {$IMPL_STRATEGY == "Performance_NetDelay_high"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive NoTimingRelaxation 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Performance_NetDelay_low"}{
+} elseif {$IMPL_STRATEGY == "Performance_NetDelay_low"} {
    opt_design -directive Explore
    write_checkpoint rerun_opt.dcp
    place_design -directive ExtraNetDelay_low
@@ -76,8 +70,7 @@ elseif {$IMPL_STRATEGY == "Performance_NetDelay_low"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive NoTimingRelaxation 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Performance_Retiming"}{
+} elseif {$IMPL_STRATEGY == "Performance_Retiming"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive ExtraPostPlacementOpt
@@ -86,8 +79,7 @@ elseif {$IMPL_STRATEGY == "Performance_Retiming"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive Explore 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Performance_ExtraTimingOpt"}{
+} elseif {$IMPL_STRATEGY == "Performance_ExtraTimingOpt"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive ExtraTimingOpt
@@ -96,8 +88,7 @@ elseif {$IMPL_STRATEGY == "Performance_ExtraTimingOpt"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive NoTimingRelaxation 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Performance_RefinePlacement"}{
+} elseif {$IMPL_STRATEGY == "Performance_RefinePlacement"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive ExtraPostPlacementOpt
@@ -106,8 +97,7 @@ elseif {$IMPL_STRATEGY == "Performance_RefinePlacement"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive NoTimingRelaxation 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Performance_SpreadSLLs"}{
+} elseif {$IMPL_STRATEGY == "Performance_SpreadSLLs"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive SSI_SpreadSLLs
@@ -116,8 +106,7 @@ elseif {$IMPL_STRATEGY == "Performance_SpreadSLLs"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive Explore 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Performance_BalanceSLLs"}{
+} elseif {$IMPL_STRATEGY == "Performance_BalanceSLLs"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive SSI_BalanceSLLs
@@ -126,8 +115,7 @@ elseif {$IMPL_STRATEGY == "Performance_BalanceSLLs"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive Explore 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Performance_BalanceSLRs"}{
+} elseif {$IMPL_STRATEGY == "Performance_BalanceSLRs"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive SSI_BalanceSLRs
@@ -136,8 +124,7 @@ elseif {$IMPL_STRATEGY == "Performance_BalanceSLRs"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive Explore 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Performance_HighUtilSLRs"}{
+} elseif {$IMPL_STRATEGY == "Performance_HighUtilSLRs"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive SSI_HighUtilSLRs
@@ -146,8 +133,7 @@ elseif {$IMPL_STRATEGY == "Performance_HighUtilSLRs"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive Explore 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Congestion_SpreadLogic_high"}{
+} elseif {$IMPL_STRATEGY == "Congestion_SpreadLogic_high"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive AltSpreadLogic_high
@@ -156,8 +142,7 @@ elseif {$IMPL_STRATEGY == "Congestion_SpreadLogic_high"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive AlternateCLBRouting 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Congestion_SpreadLogic_medium"}{
+} elseif {$IMPL_STRATEGY == "Congestion_SpreadLogic_medium"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive AltSpreadLogic_medium
@@ -166,8 +151,7 @@ elseif {$IMPL_STRATEGY == "Congestion_SpreadLogic_medium"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive AlternateCLBRouting 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Congestion_SpreadLogic_low"}{
+} elseif {$IMPL_STRATEGY == "Congestion_SpreadLogic_low"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive AltSpreadLogic_low
@@ -176,8 +160,7 @@ elseif {$IMPL_STRATEGY == "Congestion_SpreadLogic_low"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive AlternateCLBRouting 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Congestion_SSI_SpreadLogic_high"}{
+} elseif {$IMPL_STRATEGY == "Congestion_SSI_SpreadLogic_high"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive SSI_SpreadLogic_high
@@ -186,8 +169,7 @@ elseif {$IMPL_STRATEGY == "Congestion_SSI_SpreadLogic_high"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive AlternateCLBRouting 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Congestion_SSI_SpreadLogic_low"}{
+} elseif {$IMPL_STRATEGY == "Congestion_SSI_SpreadLogic_low"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive SSI_SpreadLogic_low
@@ -196,48 +178,42 @@ elseif {$IMPL_STRATEGY == "Congestion_SSI_SpreadLogic_low"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive AlternateCLBRouting 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Area_Explore"}{
+} elseif {$IMPL_STRATEGY == "Area_Explore"} {
    opt_design -directive ExploreArea
    write_checkpoint rerun_opt.dcp
    place_design -directive Default
    write_checkpoint rerun_place.dcp
    route_design -directive Default 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Area_ExploreSequential"}{
+} elseif {$IMPL_STRATEGY == "Area_ExploreSequential"} {
    opt_design -directive ExploreSequentialArea
    write_checkpoint rerun_opt.dcp
    place_design -directive Default
    write_checkpoint rerun_place.dcp
    route_design -directive Default 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Area_ExploreWithRemap"}{
+} elseif {$IMPL_STRATEGY == "Area_ExploreWithRemap"} {
    opt_design -directive ExploreWithRemap
    write_checkpoint rerun_opt.dcp
    place_design -directive Default
    write_checkpoint rerun_place.dcp
    route_design -directive Default 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Power_DefaultOpts"}{
+} elseif {$IMPL_STRATEGY == "Power_DefaultOpts"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive Default
    write_checkpoint rerun_place.dcp
    route_design -directive Default 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Power_ExploreArea"}{
+} elseif {$IMPL_STRATEGY == "Power_ExploreArea"} {
    opt_design -directive ExploreSequentialArea
    write_checkpoint rerun_opt.dcp
    place_design -directive Default
    write_checkpoint rerun_place.dcp
    route_design -directive Default 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Flow_RunPhysOpt"}{
+} elseif {$IMPL_STRATEGY == "Flow_RunPhysOpt"} {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive Default
@@ -246,32 +222,28 @@ elseif {$IMPL_STRATEGY == "Flow_RunPhysOpt"}{
    write_checkpoint rerun_phys_opt.dcp
    route_design -directive Default 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Flow_RuntimeOptimized"}{
+} elseif {$IMPL_STRATEGY == "Flow_RuntimeOptimized"} {
    opt_design -directive RuntimeOptimized
    write_checkpoint rerun_opt.dcp
    place_design -directive RuntimeOptimized
    write_checkpoint rerun_place.dcp
    route_design -directive RuntimeOptimized 
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Flow_Quick"}{
+} elseif {$IMPL_STRATEGY == "Flow_Quick"} {
    opt_design -directive RuntimeOptimized
    write_checkpoint rerun_opt.dcp
    place_design -directive Quick
    write_checkpoint rerun_place.dcp
    route_design -directive Quick
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Flow_Quick"}{
+} elseif {$IMPL_STRATEGY == "Flow_Quick"} {
    opt_design -directive RuntimeOptimized
    write_checkpoint rerun_opt.dcp
    place_design -directive Quick
    write_checkpoint rerun_place.dcp
    route_design -directive Quick
    write_checkpoint rerun_route.dcp
-}
-elseif {$IMPL_STRATEGY == "Performance_ExplorePostRoutePhysOpt"}{
+} elseif {$IMPL_STRATEGY == "Performance_ExplorePostRoutePhysOpt"} {
    opt_design -directive Explore
    write_checkpoint rerun_opt.dcp
    place_design -directive Explore
@@ -282,8 +254,7 @@ elseif {$IMPL_STRATEGY == "Performance_ExplorePostRoutePhysOpt"}{
    write_checkpoint rerun_route.dcp
    phys_opt_design -directive Explore
    write_checkpoint rerun_phys_opt_post_route.dcp
-}
-else {
+} else {
    opt_design -directive Default
    write_checkpoint rerun_opt.dcp
    place_design -directive Default
