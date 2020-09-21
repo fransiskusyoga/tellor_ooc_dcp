@@ -6,6 +6,9 @@
 #https://github.com/fransiskusyoga/tellor_ooc_dcp/releases/download/v1/top_0xbitcoin_routed_vert_unplaced.dcp
 
 open_checkpoint initial_design.dcp 
+route_design -unroute -nets [get_nets -regexp -hier shell_0xbitcoin/CORES....core_0xbitcoin.*]
+unplace_cell [get_cells -regexp -hier shell_0xbitcoin/CORES....core_0xbitcoin.* -filter {IS_PRIMITIVE}]
+lock_design -level routing
 
 if {$IMPL_STRATEGY == "Performance_Explore"} {
    opt_design -directive Explore
