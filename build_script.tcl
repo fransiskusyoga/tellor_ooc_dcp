@@ -9,6 +9,7 @@ open_checkpoint initial_design.dcp
 route_design -unroute -nets [get_nets -regexp -hier shell_0xbitcoin/CORES....core_0xbitcoin.*]
 unplace_cell [get_cells -regexp -hier shell_0xbitcoin/CORES....core_0xbitcoin.* -filter {IS_PRIMITIVE}]
 lock_design -level routing
+lock_design -unlock -level logical [get_cells -regexp -hier shell_0xbitcoin/CORES....core_0xbitcoin.* -filter {IS_PRIMITIVE}]
 
 if {$IMPL_STRATEGY == "Performance_Explore"} {
    opt_design -directive Explore
