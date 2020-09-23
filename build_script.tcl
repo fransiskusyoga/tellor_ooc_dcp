@@ -9,7 +9,10 @@ open_checkpoint initial_design.dcp
 route_design -unroute -nets [get_nets -regexp -hier shell_0xbitcoin/CORES....core_0xbitcoin.*]
 unplace_cell [get_cells -regexp -hier shell_0xbitcoin/CORES....core_0xbitcoin.* -filter {IS_PRIMITIVE}]
 lock_design -level routing
-lock_design -unlock -level logical [get_cells -regexp -hier shell_0xbitcoin/CORES....core_0xbitcoin.* -filter {IS_PRIMITIVE}]
+lock_design -unlock -level logical [get_cells shell_0xbitcoin/CORES[0].core_0xbitcoin]
+lock_design -unlock -level logical [get_cells shell_0xbitcoin/CORES[1].core_0xbitcoin]
+lock_design -unlock -level logical [get_cells shell_0xbitcoin/CORES[2].core_0xbitcoin]
+lock_design -unlock -level logical [get_cells shell_0xbitcoin/CORES[3].core_0xbitcoin]
 
 if {$IMPL_STRATEGY == "Performance_Explore"} {
    opt_design -directive Explore
@@ -232,13 +235,6 @@ if {$IMPL_STRATEGY == "Performance_Explore"} {
    place_design -directive RuntimeOptimized
    write_checkpoint rerun_place.dcp
    route_design -directive RuntimeOptimized 
-   write_checkpoint rerun_route.dcp
-} elseif {$IMPL_STRATEGY == "Flow_Quick"} {
-   opt_design -directive RuntimeOptimized
-   write_checkpoint rerun_opt.dcp
-   place_design -directive Quick
-   write_checkpoint rerun_place.dcp
-   route_design -directive Quick
    write_checkpoint rerun_route.dcp
 } elseif {$IMPL_STRATEGY == "Flow_Quick"} {
    opt_design -directive RuntimeOptimized
