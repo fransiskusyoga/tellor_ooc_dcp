@@ -16,10 +16,10 @@ endif
 ifeq($(ALGO),kadena)
 	TCL_FILE = build_script_kadena.tcl
 	ifeq ($(DOWNLOAD_URL),0)
-		LINK = https://github.com/fransiskusyoga/tellor_ooc_dcp/releases/download/v3/top_0xbitcoin_routed_square.dcp
+		LINK = https://github.com/fransiskusyoga/tellor_ooc_dcp/releases/download/v3/kadenaTop_routed_1_wire.dcp
 	endif
 	ifeq ($(DOWNLOAD_URL),1)
-		LINK = https://github.com/fransiskusyoga/tellor_ooc_dcp/releases/download/v3/top_0xbitcoin_routed_vert.dcp
+		LINK = https://github.com/fransiskusyoga/tellor_ooc_dcp/releases/download/v3/kadenaTop_routed_m_wire.dcp
 	endif
 endif
 
