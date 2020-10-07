@@ -1,6 +1,6 @@
 TCL_VARS = set IMPL_STRATEGY $(IMPL_STRATEGY)\;
 
-ifeq($(ALGO),0xbitcoin)
+ifeq ($(ALGO),0xbitcoin)
 	TCL_FILE = build_script_0xbitcoin.tcl
 	ifeq ($(DOWNLOAD_URL),0)
 		LINK = https://github.com/fransiskusyoga/tellor_ooc_dcp/releases/download/v3/top_0xbitcoin_routed_square.dcp
@@ -13,7 +13,7 @@ ifeq($(ALGO),0xbitcoin)
 	endif
 endif
 
-ifeq($(ALGO),kadena)
+ifeq ($(ALGO),kadena)
 	TCL_FILE = build_script_kadena.tcl
 	ifeq ($(DOWNLOAD_URL),0)
 		LINK = https://github.com/fransiskusyoga/tellor_ooc_dcp/releases/download/v3/kadenaTop_routed_1_wire.dcp
