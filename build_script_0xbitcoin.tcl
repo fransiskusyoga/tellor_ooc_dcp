@@ -263,10 +263,10 @@ if {$IMPL_STRATEGY == "Performance_Explore"} {
    write_checkpoint rerun_route.dcp
 }
 
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 1000 -input_pins -routable_nets -cells [get_cells shell_0xbitcoin/CORES[0].core_0xbitcoin] -name timing_core_0 -file timing_core_0.txt
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 1000 -input_pins -routable_nets -cells [get_cells shell_0xbitcoin/CORES[1].core_0xbitcoin] -name timing_core_1 -file timing_core_1.txt
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 1000 -input_pins -routable_nets -cells [get_cells shell_0xbitcoin/CORES[2].core_0xbitcoin] -name timing_core_2 -file timing_core_2.txt
-report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 1000 -input_pins -routable_nets -cells [get_cells shell_0xbitcoin/CORES[3].core_0xbitcoin] -name timing_core_3 -file timing_core_3.txt
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 100 -input_pins -routable_nets -cells [get_cells shell_0xbitcoin/CORES[0].core_0xbitcoin] -name timing_core_0 -file timing_core_0.txt
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 100 -input_pins -routable_nets -cells [get_cells shell_0xbitcoin/CORES[1].core_0xbitcoin] -name timing_core_1 -file timing_core_1.txt
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 100 -input_pins -routable_nets -cells [get_cells shell_0xbitcoin/CORES[2].core_0xbitcoin] -name timing_core_2 -file timing_core_2.txt
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 100 -input_pins -routable_nets -cells [get_cells shell_0xbitcoin/CORES[3].core_0xbitcoin] -name timing_core_3 -file timing_core_3.txt
 
 
 
