@@ -9,7 +9,10 @@ ifeq ($(ALGO),0xbitcoin)
 		LINK = https://github.com/fransiskusyoga/tellor_ooc_dcp/releases/download/v3/top_0xbitcoin_routed_vert.dcp
 	endif
 	ifeq ($(DOWNLOAD_URL),2)
-		LINK = https://github.com/fransiskusyoga/tellor_ooc_dcp/releases/download/v3/top_0xbitcoin_routed_1_wire_square.dcp
+		LINK = https://github.com/fransiskusyoga/tellor_ooc_dcp/releases/download/v3/top_0xbitcoin_routed_1_square.dcp
+	endif
+	ifeq ($(DOWNLOAD_URL),3)
+		LINK = https://github.com/fransiskusyoga/tellor_ooc_dcp/releases/download/v3/top_0xbitcoin_routed_1_vert.dcp
 	endif
 endif
 
