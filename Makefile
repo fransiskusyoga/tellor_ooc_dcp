@@ -24,6 +24,12 @@ ifeq ($(ALGO),kadena)
 	ifeq ($(DOWNLOAD_URL),1)
 		LINK = https://github.com/fransiskusyoga/tellor_ooc_dcp/releases/download/v3/kadenaTop_routed_m_wire.dcp
 	endif
+	ifeq ($(DOWNLOAD_URL),2)
+		LINK = https://github.com/fransiskusyoga/tellor_ooc_dcp/releases/download/v3/kadenaTop_routed_1_wire_high.dcp
+	endif
+	ifeq ($(DOWNLOAD_URL),3)
+		LINK = https://github.com/fransiskusyoga/tellor_ooc_dcp/releases/download/v3/kadenaTop_routed_1_wire_low.dcp
+	endif
 endif
 
 main:
